@@ -111,6 +111,20 @@
     text-align: center;
     align-items: center;
 }
+.icon {
+    top: 50%;
+    transform: translateY(40%);
+    right: 0;
+}
+.icon ul {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+.icon ul li {
+    float: left;
+    margin-left: 18px;
+}
 /* 헤더 끝 */
 #sidebar {
     width:20%;

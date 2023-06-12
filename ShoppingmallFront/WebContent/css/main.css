@@ -1,0 +1,132 @@
+@import "reset.css";
+/* 최상단 메뉴 영역 */
+.menu-area {
+    background-color: #111;
+    width: 100vw;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+.h-top {
+    width: 100vw;
+    align-items: center;
+    padding: 0 3%;
+}
+.top-menu-area {
+    align-items: center;
+}
+.top-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+.top-menu > ul {
+    display: flex;
+    justify-content: space-between;
+}
+.top-menu li {
+    display: inline-block;
+    width: auto;
+    margin-left: 20px;
+    height: 36px;
+    line-height: 36px;
+}
+.top-menu li a {
+    color: #c4c4c4;
+    font-size: 0.75em;
+}
+.cubeCap {
+    z-index: 10;
+    position            : absolute;
+    left                : 35px;
+    top                 : 18px;
+    width               : 30px;
+    height              : 30px;
+    box-sizing          : border-box;
+    border              : 2px solid white;
+    perspective         : 400px;
+    transform: translate(-100%,-50%);
+}
+.cube {
+    width             : 100%;
+    height            : 100%;
+    transform-style   : preserve-3d;
+    animation         : rotateCube 3s infinite linear normal;
+
+}
+@keyframes rotateCube {
+    from { transform: rotateX(360deg) rotateY(0deg);   }
+    to   { transform: rotateX(0deg) rotateY(360deg);}
+}
+.cube-face {
+    position    : absolute;
+    width       : 100%;
+    height      : 100%;
+    box-sizing  : border-box;
+    border      : 3px solid white;
+}
+.cube-face-front  { background: black; }
+.cube-face-right  { background: black; }
+.cube-face-back   { background: black; }
+.cube-face-left   { background: black; }
+.cube-face-top    { background: black; }
+.cube-face-bottom { background: black; }
+
+.cube-face-front  { transform: rotateY(  0deg) translateZ(5px); }
+.cube-face-right  { transform: rotateY( 90deg) translateZ(5px); }
+.cube-face-back   { transform: rotateY(180deg) translateZ(5px); }
+.cube-face-left   { transform: rotateY(-90deg) translateZ(5px); }
+.cube-face-top    { transform: rotateX( 90deg) translateZ(5px); }
+.cube-face-bottom { transform: rotateX(-90deg) translateZ(5px); } 
+/* 최상단 메뉴 영역 끝 */
+
+/* 헤더 영역 */
+#header {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 300px;
+    height: 100%;
+}
+
+.logo > a > img {
+    width: 100%;
+    height: 100%;
+}
+
+.header-menu {
+    width: 300px;
+    height: 100%;
+    padding-right: 50px;
+}
+
+.header-menu > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+/* 헤더 끝 */
+#sidebar {
+    width:20%;
+    height:500px;
+    background-color: #e9e9e9;
+}
+#contents {
+    width: 80%;
+    height: 500px;
+    background-color: #f7f7f7;
+    float: left;
+}
+#footer {
+    width: 100%;
+    height: 160px;
+    background-color: #888888;
+    clear: left;
+}
+

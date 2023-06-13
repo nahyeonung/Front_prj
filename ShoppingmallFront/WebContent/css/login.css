@@ -1,0 +1,28 @@
+@charset "UTF-8";
+#frame{
+	display: flex;
+	flex-direction: column;
+	height: calc( 100% - (100px + 36px) );
+}
+#lBody{
+	flex: 6;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid;
+	justify-content: center;
+	align-items: center;
+}
+#lFooter{
+	flex: 1;
+}
+#id, #pwd{
+	height:52px;
+	margin-bottom: 2%;
+} 
+#login{
+	font-weight: bold;
+	margin-bottom: 2%;
+}
+input::placeholder {
+  color:black;
+}

@@ -1,6 +1,10 @@
 @import "reset.css";
 /* 최상단 메뉴 영역 */
 .menu-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
     background-color: #111;
     width: 100vw;
     height: 36px;
@@ -81,39 +85,102 @@
 
 /* 헤더 영역 */
 #header {
+    position: fixed;
+    top: 36px;
+    left: 0;
+    z-index: 998;
     width: 100vw;
-    height: 100px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.5);
 }
-
+.logo, nav, .icon {
+    position: absolute;
+}
 .logo {
-    width: 300px;
+    width: 250px;
     height: 100%;
 }
-
 .logo > a > img {
     width: 100%;
     height: 100%;
 }
 
-.header-menu {
-    width: 300px;
+/* 옷 카테고리 네비 */
+nav {
+    /*
+    display: flex;
+    justify-content: center;
     height: 100%;
-    padding-right: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    */
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
 }
-
-.header-menu > ul {
-    width: 100%;
-    height: 100%;
+.header-menu {
+    margin-left: 100px;
+    line-height: 100px;
+    width: 300px;
     display: flex;
     justify-content: space-between;
+}
+.header-menu > ul {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
     text-align: center;
     align-items: center;
 }
+.header-menu > li > a{
+    /*
+    box-sizing: border-box;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    white-space: nowrap;
+    */
+    box-sizing: border-box;
+    height: 70px;
+    border-bottom: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 0 32px;
+    white-space: nowrap;
+}
+.header-menu > li:hover > a {
+    border-bottom: 2px solid #111;
+}
+.sub-menu { 
+    display: none;
+    text-align: center;
+    padding-top: 20px;
+}
+.sub-menu li {
+    line-height: 20px;
+}
+.sub-menu li a {
+    font-size: 0.7em;
+    color:#aaa;
+    letter-spacing: -0.2px;
+}
+/* 옷 카테고리 네비 끝 */
+
+/* 아이콘 메뉴 */
 .icon {
-    top: 50%;
-    transform: translateY(40%);
+    height: 100px;
+    margin-right: 10px;
+    line-height: 50px;
+    transform: translateY(30%);
     right: 0;
 }
 .icon ul {
@@ -125,22 +192,121 @@
     float: left;
     margin-left: 18px;
 }
+.menu-btn {
+    display: none;
+}
+/* 아이콘 메뉴 끝 */
 /* 헤더 끝 */
+
+/* 메인 영역 */
+body {
+    overflow-x: hidden;
+}
+#container {
+    width: 100vw;
+    height: 900px;
+    position: relative;
+    top: 107px;
+}
 #sidebar {
     width:20%;
-    height:500px;
+    height:900px;
     background-color: #e9e9e9;
 }
 #contents {
     width: 80%;
-    height: 500px;
+    height: 900px;
     background-color: #f7f7f7;
     float: left;
 }
+/* 푸터 영역 */
+footer {
+    position: relative;
+    background-color: #111;
+    color: #fff;
+}
+footer a {
+    color: #fff;
+}
+.title {
+    font-size: 1.4em;
+}
 #footer {
+    position: relative;
     width: 100%;
-    height: 160px;
-    background-color: #888888;
+    max-width: 100vw;
+    height: 440px;
     clear: left;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+}
+/*
+.f-top, .f-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 40px 0;
+    font-size: 0.7em;;
+}*/
+.f-top {
+    display: flex;
+    justify-content: space-between;
+    width:1024px;
+    margin: 0 auto;
+    padding: 40px 0;
+    font-size: 0.6875em;;
+}
+.f-bottom {
+    width:1024px;
+    margin: 0 auto;
+    padding: 40px 0;
+    font-size: 0.6875em;
+    color: #aaa;
+}
+.f-line {
+    border-top: 1px solid #333;
+}
+#f-top, .f-info {
+    display: flex;
+    justify-content: space-between;
+}
+.f-menu > li {
+    line-height: 30px;
+}
+.f-menu > li > a {
+    font-size: 0.7em;
+}
+.f-sub li {
+    line-height: 24px;
+}
+.f-sub a {
+    color: #aaa;
+}
+.social {
+    margin-right: 20px;
+}
+.social .f-sub {
+    display: flex;
+    flex-wrap: wrap;
+}
+.social .f-sub li {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 0.8em;
+    margin-right: 6px;
+    background-color: #444;
+}
+.f-info > p {
+    line-height: 14px;
+}
+#alert {
+    font-size: 1px;
 }
 

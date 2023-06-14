@@ -1,71 +1,124 @@
 @import "reset.css";
+
+@charset "UTF-8";
+html{
+	width: 100%;
+	height: 100%;
+	
+}
+
 body{
-	background-color: black;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
 }
 #parent{
   position : relative;
-  margin-left : 20%;
+  width: 100%;
+  height: 100%;
 }
 #main_img{
 	position: absolute;
+	width: 1700px;
+	height: 970px;
 }
 button.btn1 {
   position: absolute;
-  top: 70px;
-  left : 400px; 
+  top: 40px;
+  left : 680px; 
   border: none;
   font-size: 15px;
   width: 80px;
   border-radius: 100px;
   background-color: white;
+  cursor: pointer;
 }
 button.btn2 {
   position: absolute;
-  top: 300px;
-  left : 330px;
+  top: 270px;
+  left : 580px;
   border: none;
   font-size: 15px;
   width: 80px;
   border-radius: 100px;
   background-color: white;
+  cursor: pointer;
 }
 button.btn3 {
   position: absolute;
-  top: 700px;
-  left : 330px;
+  top: 450px;
+  left : 600px;
   border: none;
   font-size: 15px;
   width: 80px;
   border-radius: 100px;
   background-color: white;
+  cursor: pointer;
 }
 .line1{
 	position: absolute;
-	top: 79px;
-  	left : 480px;
+	top: 50px;
+  	left : 760px;
 	width : 50px;
 	height: 1px;
 	background-color: white;
 }
 .line2{
 	position: absolute;
-	top: 309px;
-  	left : 410px;
+	top: 280px;
+  	left : 660px;
 	width : 50px;
 	height: 1px;
 	background-color: white;
 }
 .line3{
 	position: absolute;
-	top: 709px;
-  	left : 410px;
+	top: 460px;
+  	left : 680px;
 	width : 50px;
 	height: 1px;
 	background-color: white;
 }
+.visit-btn{
+	position: absolute;
+	top: 350px;
+	left: 1000px;
+	border-radius: 50px;
+	border: 1px solid white;
+}
+.visit-btn button{
+	height: 50px;
+	border-radius: 50px;
+	border: none;
+	background-color: transparent;
+	color: white;
+	width: 200px;
+
+}
+.visit-btn:hover{
+	border: 1px solid black;
+	background-color: black;
+	transition: all ease 1s 0s;
+}
+.visit-btn:hover + .video video{
+	clip-path: circle(300px);
+	transition: all ease 2s 0s;
+}
+.video{
+	position: absolute;
+	top: 410px;
+	left: 900px;
+}
+.video video{
+	height: 200px;
+	left: 100px;
+	position: absolute;
+	clip-path: circle(30px);
+}
+
 .cubeCap {
         position            : absolute;
-        left                : 400px;
+        left                : 650px;
         top                 : 40px;
         width               : 20px;
         height              : 20px;
@@ -74,7 +127,7 @@ button.btn3 {
     }
 .cubeTop {
         position            : absolute;
-        left                : 330px;
+        left                : 550px;
         top                 : 270px;
         width               : 20px;
         height              : 20px;
@@ -83,8 +136,8 @@ button.btn3 {
     }
 .cubeBottom {
         position            : absolute;
-        left                : 330px;
-        top                 : 670px;
+        left                : 570px;
+        top                 : 450px;
         width               : 20px;
         height              : 20px;
         box-sizing          : border-box;

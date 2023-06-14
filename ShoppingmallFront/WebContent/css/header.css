@@ -1,13 +1,13 @@
-@charset "UTF-8";
+@import "reset.css";
 /* 최상단 메뉴 영역 */
 .menu-area {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
-    background-color: #111;
+    background-color: #fff;
     width: 100vw;
-    height: 36px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -160,18 +160,39 @@ nav {
 .header-menu > li:hover > a {
     border-bottom: 2px solid #111;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+}
+.dropdown:hover .sub-menu {
+    display: block;
+}
 .sub-menu { 
     display: none;
+    position: absolute;
     text-align: center;
-    padding-top: 20px;
 }
 .sub-menu li {
+    width: 96px;
+    height: 20px;
     line-height: 20px;
 }
 .sub-menu li a {
-    font-size: 0.7em;
-    color:#aaa;
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    margin-top: 5px;
+    text-align: center;
+    color:#111;
     letter-spacing: -0.2px;
+}
+.sub-menu li a:hover {
+    background-color: #111;
+    color: #fff;
 }
 /* 옷 카테고리 네비 끝 */
 

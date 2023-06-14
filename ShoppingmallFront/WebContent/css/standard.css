@@ -1,9 +1,16 @@
 @import "reset.css";
 body, html {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     font-weight: 300;
     color: #111;
     font-size: 16px;
+}
+#wrapper {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 450px; /* padding의 높이 */ 
 }
 li, ul{
     list-style: none;
@@ -11,8 +18,4 @@ li, ul{
 a {
     text-decoration: none;
     color: #111;
-}
-#container {
-    width:100%;
-    display: flex;
 }

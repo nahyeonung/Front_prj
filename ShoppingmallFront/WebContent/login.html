@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/standard.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/footer.css">
 	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 	<script>
 	$(function() {
@@ -16,153 +15,60 @@
 </script>
 </head>
 <body>
-    <div id="always-on"><!--항상 보여지는 상단 메뉴 바-->
-        <div class="menu-area">
-            <div class="h-top">
-                <div class="cubeCap">
-                    <div class="cube">
-                        <div class="cube-face cube-face-front"></div>
-                        <div class="cube-face cube-face-back"></div>
-                        <div class="cube-face cube-face-right"></div>
-                        <div class="cube-face cube-face-left"></div>
-                        <div class="cube-face cube-face-top"></div>
-                        <div class="cube-face cube-face-bottom"></div>
-                    </div>
+    <div class="menu-area">
+        <div class="h-top">
+            <div class="cubeCap">
+                <div class="cube">
+                    <div class="cube-face cube-face-front"></div>
+                    <div class="cube-face cube-face-back"></div>
+                    <div class="cube-face cube-face-right"></div>
+                    <div class="cube-face cube-face-left"></div>
+                    <div class="cube-face cube-face-top"></div>
+                    <div class="cube-face cube-face-bottom"></div>
                 </div>
-                <div class="top-menu-area">
-                    <ul class="top-menu">
-                        <li><a href="#">고객센터</a></li>
-                        <li><a href="#">회원가입</a></li>
-                        <li><a href="login.html">로그인</a></li>
-                    </ul>
-                </div>
-            </div><!--<h-top 끝 -->
-        </div><!--menu-area 끝 --> 
+            </div>
+            <div class="top-menu-area">
+                <ul class="top-menu">
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="login.html">로그인</a></li>
+                </ul>
+            </div>
+        </div><!--<h-top 끝 -->
+    </div><!--menu-area 끝 --> 
 
-        <!--헤더 시작-->
-        <div id="header">
-            <div class="logo">
-                <a href="main.html">
-                    <img src="images/logo.png" alt="GuHaeZo" title="로고">
-                </a>
-            </div>
-            <nav>
-                <ul class="header-menu">
-                    <li>
-                        <a href="#">모자</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">모자1</a></li>
-                            <li><a href="#">모자2</a></li>
-                            <li><a href="#">모자3</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">상의</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">상의1</a></li>
-                            <li><a href="#">상의2</a></li>
-                            <li><a href="#">상의3</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">하의</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">하의1</a></li>
-                            <li><a href="#">하의2</a></li>
-                            <li><a href="#">하의3</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div class="icon">
-                <ul>
-                    <li><a href="#"><img src="images/search.svg" alt="찾기 아이콘"></a></li>
-                    <li class="heart-btn"><a href="#"><img src="images/heart.svg" alt="즐겨찾기 아이콘"></a></li>
-                    <li><a href="#"><img src="images/shopping-bag.svg" alt="장바구니 아이콘"></a></li>
-                    <li class="menu-btn"><a href="#"><img src="images/menu.svg" alt="메뉴 아이콘"></a></li>
-                </ul>
-            </div>
+    <!--헤더 시작-->
+    <div id="header">
+        <div class="logo">
+            <a href="main.html">
+                <img src="images/ori (2).png" alt="GuHaeZo" title="로고">
+            </a>
         </div>
-        <!--헤더 끝-->
-    </div><!--상시 보여지는 메뉴 바 끝-->
+        <div class="header-menu">
+            <ul>
+                <li><a href="#">모자</a></li>
+                <li><a href="#">상의</a></li>
+                <li><a href="#">하의</a></li>
+            </ul>
+        </div>
+        <div class="icon">
+            <ul>
+                <li><a href="#"><img src="images/search.svg" alt="찾기 아이콘"></a></li>
+                <li class="heart-btn"><a href="#"><img src="images/heart.svg" alt="즐겨찾기 아이콘"></a></li>
+                <li><a href="#"><img src="images/shopping-bag.svg" alt="장바구니 아이콘"></a></li>
+                <li class="menu-btn"><a href="#"><img src="images/menu.svg" alt="메뉴 아이콘"></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--헤더 끝-->
     <div id="frame">
     	<div id="lBody">
     		<div id="login">LOGIN</div>
 				<input id="id" type="text" size="50" maxlength="20" placeholder="email">
 				<input id="pwd" type="password" size="50" placeholder="password">
-				<div id="loginButton">
-					<button type="button">LOGIN</button>
-				</div>
-				<div id="registButton">
-					<button type="button" onClick="location.href='regist.html'">CREATE ACCOUNT</button>
-				</div>
     	</div>
     	<div id="lFooter"></div>
     </div>
-    <!--푸터 시작-->
-    <footer>
-        <div id="footer">
-            <div class="f-top">
-                <ul class="f-menu">
-                    <li class="title"><a href="#">고객센터</a></li>
-                    <ul class="f-sub">
-                        <li><a href="#">멤버쉽 혜택/서비스</a></li>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">1:1 채팅 문의</a></li>
-                        <li><a href="#">이용약관</a></li>
-                        <li><a href="#">개인정보처리방침</a></li>
-                    </ul>
-                </ul>
-                <ul class="f-menu">
-                    <li class="title"><a href="#">리뷰</a></li>
-                    <ul class="f-sub">
-                        <li><a href="#">쇼핑몰 리뷰</a></li>
-                        <li><a href="#">SNS 리뷰</a></li>
-                        <li><a href="#">이벤트 리뷰</a></li>
-                    </ul>
-                </ul>
-                <ul class="f-menu">
-                    <li class="title"><a href="#">이벤트</a></li>
-                    <ul class="f-sub">
-                        <li><a href="#">진행 중 이벤트</a></li>
-                        <li><a href="#">이벤트 참여</a></li>
-                        <li><a href="#">당첨자 발표</a></li>
-                    </ul>
-                </ul>
-                <ul class="f-menu social">
-                    <li class="title"><a href="#">SOCIAL</a></li>
-                    <ul class="f-sub">
-                        <li><a href="#"><i class="xi-twitter"></i></a></li>
-                        <li><a href="#"><i class="xi-facebook"></i></a></li>
-                        <li><a href="#"><i class="xi-youtube"></i></a></li>
-                        <li><a href="#"><i class="xi-instagram"></i></a></li>
-                        <li><a href="#"><i class="xi-kakaotalk"></i></a></li>
-                    </ul>
-                </ul>
-            </div>
-
-            <div class="f-line"></div>
-            
-            <div class="f-bottom">
-                <div class="f-info">
-                    <p>사업장명: Tha GuHaeZo<br>
-                        CEO: Na Hyun Woong<br>
-                        사업장 주소: 서울시 종로구 창경궁로 254 동원빌딩 403호<br>
-                        사업자등록번호: 393-23-49210<br>
-                        고객센터 문의: 010-1234-5678<br>
-                        이메일: nanostyle@naver.com
-                        <br><br>
-                        <span id="alert">자사 상품은 환불 및 교환이 불가능합니다.</span>
-                    </p>
-                    <div class="f-info2">
-                        <p></p>
-                    </div>
-                </div>
-                <p><i class="xi-maker">대한민국</i>&copy; 2023 Tha GuHaeZo. All Rights Reserved</p>
-            </div>
-        </div>
-    </footer>
-    <!--푸터 끝-->
 
 </body>
 </html>

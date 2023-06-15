@@ -3,12 +3,12 @@
 /* 메인 영역 */
 #container {
     width: 100%;
-    height: auto;
     min-height: 100%;
     position: absolute;
     top: 107px;
 }
 #contents {
+    z-index: 999;
     width: 100%;
     height: auto;
     background-color: #f7f7f7;
@@ -16,15 +16,45 @@
     display: flex;
     flex-wrap: wrap;
 }
-.brand {
+.louis-vuitton {
+    text-align: center;
+}
+.prada {
+    text-align: center;
+}
+.LV {
+    font-family: "futur";
     text-align: center;
     width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111;
+}
+.pra {
+    font-family: "prada";
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111;
+}
+.bbr {
+    font-family: "burberry";
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111;
 }
 .product-item {
 	display: inline-block;
-    flex-basis: 20%;
-	width: 300px;
-    height: 350px;
+    flex-basis: 25%;
+	width: 400px;
+    height: 430px;
 	margin: 0px auto;
 	position: relative
 }
@@ -38,8 +68,9 @@
     text-align: center;
 }
 .prd-img, .worn-img {
-    width: 300px;
-    height: 300px;
+    flex-basis: 25%;
+    width: 400px;
+    height: 400px;
 }
 .worn-img {
   position: absolute;

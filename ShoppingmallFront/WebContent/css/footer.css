@@ -1,7 +1,17 @@
-+@charset "UTF-8";
+@import "reset.css";
 /* 푸터 영역 */
 footer {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 100vw;
+    height: 440px;
+    clear: left;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+}
+#footer {
     background-color: #111;
     color: #fff;
 }
@@ -10,16 +20,6 @@ footer a {
 }
 .title {
     font-size: 1.4em;
-}
-#footer {
-    position: relative;
-    width: 100%;
-    max-width: 100vw;
-    height: 440px;
-    clear: left;
-    margin-left: auto;
-    margin-right: auto;
-    white-space: nowrap;
 }
 /*
 .f-top, .f-bottom {

@@ -2,15 +2,16 @@
 body, html {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100vh;
     font-weight: 300;
     color: #111;
     font-size: 16px;
 }
 #wrapper {
+    z-index: 998;
     position: relative;
     min-height: 100%;
-    padding-bottom: 450px; /* padding의 높이 */ 
+    /* padding-bottom: 450px; padding의 높이 */ 
 }
 li, ul{
     list-style: none;

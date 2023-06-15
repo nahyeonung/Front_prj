@@ -17,12 +17,29 @@ $(function() {
 		location.href = 'main.html';
 	})
 })
+var mHtml = $("html");
+var page = 1;
+
+
+mHtml.animate({scrollTop : 0},10);
+$(window).on("wheel", function(e) {
+    if(mHtml.is(":animated")) return;
+    if(e.originalEvent.deltaY > 0) {
+        if(page == 3) return;
+        page++;
+    } else if(e.originalEvent.deltaY < 0) {
+        if(page == 1) return;
+        page--;
+    }
+    var posTop =(page-1) * $(window).height();
+    mHtml.animate({scrollTop : posTop});
+})
 </script>
 </head>
 <body>
 <div id="parent">
 	<img id="main_img" src="images/mainImage.png" alt="사진">
-	<button class="btn1" type="button" onclick="javascript:sensorBtnClick('btn1');">hat</button>
+	<button class="btn1" type="button" onclick="javascript:sensorBtnClick('btn1');">bag</button>
     <button class="btn2" type="button" onclick="javascript:sensorBtnClick('btn2');">top</button>
     <button class="btn3" type="button" onclick="javascript:sensorBtnClick('btn2');">bottom</button>
     <div class="cubeCap">
@@ -63,6 +80,99 @@ $(function() {
 	</div>
   	<div class="video">
     	<video src="videos/The Holiday Season with Louis Vuitton.mp4" loop muted autoplay playsinline></video>
+  	</div>
+</div>
+<div id="parent">
+	<img id="main_img" src="images/chanel.png" alt="사진">
+	<button class="btn1-p2" type="button" onclick="javascript:sensorBtnClick('btn1');">bag</button>
+    <button class="btn2-p2" type="button" onclick="javascript:sensorBtnClick('btn2');">top</button>
+    <button class="btn3-p2" type="button" onclick="javascript:sensorBtnClick('btn2');">bottom</button>
+    <div class="cubeCap-p2">
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
+    </div>
+    <div class="cubeTop-p2">
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
+    </div>
+    <div class="cubeBottom-p2">
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
+    </div>
+	<span class="line1-p2"></span>
+	<span class="line2-p2"></span>
+	<span class="line3-p2"></span>
+	<div class="visit-btn-p2">
+		<button type="button">watch advertisement</button>
+	</div>
+  	<div class="video-p2">
+    	<video src="videos/prada.mp4" loop muted autoplay playsinline></video>
+  	</div>
+</div>
+<div id="parent">
+	<img id="main_img" src="images/burberry.jpg" alt="사진">
+	<button class="btn1-p3" type="button" onclick="javascript:sensorBtnClick('btn1');">bag</button>
+    <button class="btn2-p3" type="button" onclick="javascript:sensorBtnClick('btn2');">top</button>
+    <button class="btn3-p3" type="button" onclick="javascript:sensorBtnClick('btn2');">bottom</button>
+    <div class="cubeCap-p3">
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
+    </div>
+    <div class="cubeTop-p3">
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
+    </div>
+    <div class="cubeBottom-p3">
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
+    </div>
+	<span class="line1-p3"></span>
+	<span class="line2-p3"></span>
+	<span class="line3-p3"></span>
+	<div class="move-btn">
+		<button type="button" onClick="location.href='main.html'">visit shoppingmall</button>
+	</div>
+	<div class="visit-btn">
+		<button type="button">watch advertisement</button>
+	</div>
+  	<div class="video">
+    	<video src="videos/burberry.mp4" loop muted autoplay playsinline></video>
   	</div>
 </div>
 </body>

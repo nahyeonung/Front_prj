@@ -1,8 +1,9 @@
 @import "reset.css";
 #frame{
+	height:100%;
+	margin-top: calc(100% - (100% - 106px));
 	display: flex;
 	flex-direction: column;
-	height: calc( 100% - (100px + 36px) );
 }
 #lBody{
 	flex: 6;

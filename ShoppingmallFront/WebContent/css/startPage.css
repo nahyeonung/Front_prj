@@ -20,8 +20,8 @@ body{
 }
 #main_img{
 	position: absolute;
-	width: 1700px;
-	height: 970px;
+	width: 100%;
+	height: 100%;
 }
 .move-btn{
 	position: absolute;
@@ -47,8 +47,8 @@ body{
 }
 button.btn1 {
   position: absolute;
-  top: 630px;
-  left : 550px; 
+  top: 66%;
+  left : 34%; 
   border: none;
   font-size: 15px;
   width: 80px;
@@ -58,8 +58,8 @@ button.btn1 {
 }
 button.btn2 {
   position: absolute;
-  top: 270px;
-  left : 580px;
+  top: 28%;
+  left : 36%;
   border: none;
   font-size: 15px;
   width: 80px;
@@ -69,8 +69,8 @@ button.btn2 {
 }
 button.btn3 {
   position: absolute;
-  top: 450px;
-  left : 600px;
+  top: 47%;
+  left : 36%;
   border: none;
   font-size: 15px;
   width: 80px;
@@ -80,8 +80,8 @@ button.btn3 {
 }
 button.btn1-p2 {
   position: absolute;
-  top: 540px;
-  left : 1080px; 
+  top: 56%;
+  left : 66%; 
   border: none;
   font-size: 15px;
   width: 80px;
@@ -91,8 +91,8 @@ button.btn1-p2 {
 }
 button.btn2-p2 {
   position: absolute;
-  top: 270px;
-  left : 1040px;
+  top: 28%;
+  left : 62%;
   border: none;
   font-size: 15px;
   width: 80px;
@@ -102,8 +102,8 @@ button.btn2-p2 {
 }
 button.btn3-p2 {
   position: absolute;
-  top: 650px;
-  left : 900px;
+  top: 68%;
+  left : 57%;
   border: none;
   font-size: 15px;
   width: 80px;
@@ -116,8 +116,8 @@ button.btn3-p2 {
 
 button.btn1-p3 {
   position: absolute;
-  top: 540px;
-  left : 510px; 
+  top: 56%;
+  left : 34%; 
   border: none;
   font-size: 15px;
   width: 80px;
@@ -127,8 +127,8 @@ button.btn1-p3 {
 }
 button.btn2-p3 {
   position: absolute;
-  top: 270px;
-  left : 620px;
+  top: 30%;
+  left : 40%;
   border: none;
   font-size: 15px;
   width: 80px;
@@ -138,8 +138,8 @@ button.btn2-p3 {
 }
 button.btn3-p3 {
   position: absolute;
-  top: 810px;
-  left : 1030px;
+  top: 85%;
+  left : 42%;
   border: none;
   font-size: 15px;
   width: 80px;
@@ -147,10 +147,10 @@ button.btn3-p3 {
   background-color: white;
   cursor: pointer;
 }
-.line1{
+/*.line1{
 	position: absolute;
 	top: 640px;
-	left : 630px;
+	left : 37%;
 	width : 50px;
 	height: 1px;
 	background-color: white;
@@ -158,7 +158,7 @@ button.btn3-p3 {
 .line2{
 	position: absolute;
 	top: 280px;
-  	left : 660px;
+  	left : 38%;
 	width : 50px;
 	height: 1px;
 	background-color: white;
@@ -166,7 +166,7 @@ button.btn3-p3 {
 .line3{
 	position: absolute;
 	top: 460px;
-  	left : 680px;
+  	left : 39%;
 	width : 50px;
 	height: 1px;
 	background-color: white;
@@ -220,7 +220,7 @@ button.btn3-p3 {
 	width : 50px;
 	height: 1px;
 	background-color: white;
-}
+}*/
 .visit-btn{
 	position: absolute;
 	top: 350px;
@@ -299,8 +299,8 @@ button.btn3-p3 {
 
 .cubeCap {
         position            : absolute;
-        left                : 520px;
-        top                 : 630px;
+        left                : 32%;
+        top                 : 66%;
         width               : 20px;
         height              : 20px;
         box-sizing          : border-box;
@@ -308,8 +308,8 @@ button.btn3-p3 {
     }
 .cubeTop {
         position            : absolute;
-        left                : 550px;
-        top                 : 270px;
+        left                : 34%;
+        top                 : 28%;
         width               : 20px;
         height              : 20px;
         box-sizing          : border-box;
@@ -317,8 +317,8 @@ button.btn3-p3 {
     }
 .cubeBottom {
         position            : absolute;
-        left                : 570px;
-        top                 : 450px;
+        left                : 34%;
+        top                 : 47%;
         width               : 20px;
         height              : 20px;
         box-sizing          : border-box;
@@ -327,8 +327,8 @@ button.btn3-p3 {
 
 .cubeCap-p2 {
         position            : absolute;
-        left                : 1050px;
-        top                 : 540px;
+        left                : 64%;
+        top                 : 56%;
         width               : 20px;
         height              : 20px;
         box-sizing          : border-box;
@@ -336,8 +336,8 @@ button.btn3-p3 {
     }
 .cubeTop-p2 {
         position            : absolute;
-        left                : 1010px;
-        top                 : 270px;
+        left                : 60%;
+        top                 : 28%;
         width               : 20px;
         height              : 20px;
         box-sizing          : border-box;
@@ -345,8 +345,8 @@ button.btn3-p3 {
     }
 .cubeBottom-p2 {
         position            : absolute;
-        left                : 870px;
-        top                 : 650px;
+        left                : 55%;
+        top                 : 68%;
         width               : 20px;
         height              : 20px;
         box-sizing          : border-box;
@@ -356,8 +356,8 @@ button.btn3-p3 {
     
 .cubeCap-p3 {
         position            : absolute;
-        left                : 480px;
-        top                 : 540px;
+        left                : 32%;
+        top                 : 56%;
         width               : 20px;
         height              : 20px;
         box-sizing          : border-box;
@@ -365,8 +365,8 @@ button.btn3-p3 {
     }
 .cubeTop-p3 {
         position            : absolute;
-        left                : 590px;
-        top                 : 270px;
+        left                : 38%;
+        top                 : 30%;
         width               : 20px;
         height              : 20px;
         box-sizing          : border-box;
@@ -374,8 +374,8 @@ button.btn3-p3 {
     }
 .cubeBottom-p3 {
         position            : absolute;
-        left                : 1120px;
-        top                 : 810px;
+        left                : 40%;
+        top                 : 85%;
         width               : 20px;
         height              : 20px;
         box-sizing          : border-box;

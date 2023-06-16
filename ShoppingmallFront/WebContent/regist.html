@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height:calc(100% + 106px)">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="css/footer.css">
 	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 </head>
-<body>
+<body style="height:100%">
        <div class="menu-area">
             <div class="h-top">
                 <div class="top-menu-area">
                     <ul class="top-menu">
                         <li><a href="#">고객센터</a></li>
-                        <li><a href="#">회원가입</a></li>
+                        <li><a href="regist.html">회원가입</a></li>
                         <li><a href="login.html">로그인</a></li>
                     </ul>
                 </div>
@@ -34,27 +34,22 @@
             <nav>
                 <ul class="header-menu">
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">top</a>
+                        <a href="#" class="dropbtn">BAG</a>
                         <ul class="sub-menu">
-                            <li><a href="#">모자1</a></li>
-                            <li><a href="#">모자2</a></li>
-                            <li><a href="#">모자3</a></li>
+                            <li><a href="bag.html">BAG</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">bottom</a>
+                        <a href="#" class="dropbtn">TOP</a>
                         <ul class="sub-menu">
-                            <li><a href="#">상의1</a></li>
-                            <li><a href="#">상의2</a></li>
-                            <li><a href="#">상의3</a></li>
+                            <li><a href="main.html">OUTER</a></li>
+                            <li><a href="shirts.html">SHIRTS</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">bag</a>
+                        <a href="#" class="dropbtn">BOTTOM</a>
                         <ul class="sub-menu">
-                            <li><a href="#">하의1</a></li>
-                            <li><a href="#">하의2</a></li>
-                            <li><a href="#">하의3</a></li>
+                            <li><a href="pants.html">PANTS</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -65,8 +60,10 @@
       					<input type="text" class="search-txt" name=""placeholder="Type to search">
       					<a class="search-btn" href="#"><img src="images/search.svg" alt="찾기 아이콘"></a>
         				<i class="fas fa-search"></i>
-      					</a>
     				</div></li>
+    				<li>
+    					<img src="images/shopping-bag.svg">
+    				</li>
                 </ul>
             </div>
         </div>
@@ -114,6 +111,67 @@
 				<button type="button" onClick="move()">CREATE</button>
 			</div>
     	</div>
+    	<footer style="position:inherit; flex:1">
+        	    <div id="footer">
+            	    <div class="f-top">
+                	    <ul class="f-menu">
+                    	    <li class="title"><a href="#">고객 서비스</a></li>
+                        	<ul class="f-sub">
+                            	<li><a href="#">자주 묻는 질문</a></li>
+                            	<li><a href="#">상담원 문의</a></li>
+                            	<li><a href="#">주문 및 배송</a></li>
+                            	<li><a href="#">사이트맵</a></li>
+                        	</ul>
+                    	</ul>
+                    	<ul class="f-menu">
+                        	<li class="title"><a href="#">이벤트</a></li>
+                       	 <ul class="f-sub">
+                        	    <li><a href="#">진행 중인 이벤트</a></li>
+                            	<li><a href="#">이벤트 참여</a></li>
+                       	     <li><a href="#">당첨자 발표</a></li>
+                  	      </ul>
+                	    </ul>
+                   	 <ul class="f-menu">
+                   	     <li class="title"><a href="#">법적 고지 및 쿠키</a></li>
+                   	     <ul class="f-sub">
+                   	         <li><a href="#">이용약관</a></li>
+                   	         <li><a href="#">개인정보처리방침</a></li>
+                   	         <li><a href="#">쿠키 정책</a></li>
+                   	     </ul>
+                   	 </ul>
+                   	 <ul class="f-menu social">
+                   	     <li class="title"><a href="#">SOCIAL</a></li>
+                   	     <ul class="f-sub">
+                   	         <li><a href="#"><i class="xi-twitter"></i></a></li>
+                   	         <li><a href="#"><i class="xi-facebook"></i></a></li>
+                   	         <li><a href="#"><i class="xi-youtube"></i></a></li>
+                   	         <li><a href="#"><i class="xi-instagram"></i></a></li>
+                   	         <li><a href="#"><i class="xi-kakaotalk"></i></a></li>
+                   	     </ul>
+                   	 </ul>
+              	  </div>
+
+                	<div class="f-line"></div>
+                
+          	      <div class="f-bottom">
+           	         <div class="f-info">
+  	                      <p> NaNoStyle(유) | 
+        	                    대표이사:나현웅<br>
+                         	   서울시 종로구 창경궁로 254 동원빌딩 403호<br>
+                       	     사업자등록번호: 393-23-49210<br>
+                       	     고객센터: 010-1234-5678<br>
+                            	이메일: nanostyle@naver.com
+                            	<br><br>
+                     	   </p>
+                    	    <div class="f-info2">
+                    	        <p></p>
+                    	    </div>
+                	    </div>
+                	    <p><i class="xi-maker">대한민국</i>&copy; 2023 NaNoStyle. All Rights Reserved</p>
+            	    </div>
+          	  </div>
+       		 </footer>
+      	  <!--푸터 끝-->
     </div>
 
 </body>

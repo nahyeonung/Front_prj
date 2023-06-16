@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create account page</title>
+    <link rel="stylesheet" href="css/standard.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/productDetail.css">
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script></head>
+<body style="height:100%">
+		<div class="menu-area">
+            <div class="h-top">
+                <div class="top-menu-area">
+                    <ul class="top-menu">
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="regist.html">회원가입</a></li>
+                        <li><a href="login.html">로그인</a></li>
+                    </ul>
+                </div>
+            </div><!--<h-top 끝 -->
+        </div><!--menu-area 끝 --> 
+
+        <!--헤더 시작-->
+        <div id="header">
+            <div class="logo">
+                <a href="main.html">
+                    <h1>THA GUHAEZO</h1>
+                </a>
+            </div>
+            <nav>
+                <ul class="header-menu">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">BAG</a>
+                        <ul class="sub-menu">
+                            <li><a href="bag.html">BAG</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">TOP</a>
+                        <ul class="sub-menu">
+                            <li><a href="main.html">OUTER</a></li>
+                            <li><a href="shirts.html">SHIRTS</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">BOTTOM</a>
+                        <ul class="sub-menu">
+                            <li><a href="pants.html">PANTS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="icon">
+                <ul>
+                    <li><div class="search-box">
+      					<input type="text" class="search-txt" name=""placeholder="Type to search">
+      					<a class="search-btn" href="#"><img src="images/search.svg" alt="찾기 아이콘"></a>
+        				<i class="fas fa-search"></i>
+    				</div></li>
+    				<li>
+    					<img src="images/shopping-bag.svg">
+    				</li>
+                </ul>
+            </div>
+        </div>
+        <!--헤더 끝-->
+	<div id="frame">
+		<div id="picture-frame">
+			<img style="height: 100%; width: 100%"class="prd-img" src="product_images/detail1.avif" alt="상품 이미지">
+			<img style="height: 100%; width: 100%"class="prd-img" src="product_images/detail3.avif" alt="상품 이미지">
+			<img style="height: 100%; width: 100%"class="prd-img" src="product_images/detail2.webp" alt="상품 이미지">
+		</div>
+		<div id="select-frame">
+			<div id="select-detail-frame">
+				<div style="margin-left: 3%">
+					<p class="code">M32330</p>
+					<h1>온더고</h1>
+					<p style="color: gray">₩ 3.950.000</p>	
+					<div class="sojae">
+						<span>소재</span>
+						<span style="float:right; margin-right:3%">모노그램</span>				
+					</div>
+					<div style="margin-bottom:2%;">
+						<span>사이즈 선택</span>
+						<input id="sizeSelect" type="text" value="" style="font-size:15px" readonly>
+					</div>
+					<div class="size">
+						<div class="size-b" id="gm" onclick="select(id)">GM</div>
+						<div class="size-b" id="mm" onclick="select(id)">MM</div>	
+						<div class="size-b" id="pm" onclick="select(id)">PM</div>			
+					</div>
+					<div style="margin-right: 3%;">
+						<button id="modal_open_btn" type="button" onclick="modal('modal')">장바구니 추가하기</button>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!--모달창-->
+	<div id="modal">
+		<div class="modal_title">해당 제품이 쇼핑백에 추가되었습니다.</div>
+		<div class="modal_main">
+			<div class="modal_main_left">
+				<div>
+					<img style="height: 100%; width: 100%" class="prd-img" src="product_images/detail2.webp" alt="상품 이미지">
+				</div>
+			</div>
+			<div class="modal_main_right">
+				<div style="width:100%; height:100%; margin:4%">
+					<p style="margin-bottom: 2%; font-size: 17px">온더고</p>
+					<p style="color:gray; font-size:13px; margin-bottom: 1%">M46373</p>
+					<p style="color:gray; margin-bottom: 2%; font-size: 14px">색상: 모노그램</p>
+					<p style="font-size: 16px">₩ 3,950,000</p>
+				</div>
+			</div>		
+		</div>
+		<div class="modal_bottom">
+			<div class="modal_bottom_left">
+				<a href="main.html" class="check">계속 쇼핑하기</a>
+			</div>
+			<div class="modal_bottom_right">
+				<div>
+					<a style="color:white" href="main.html" class="check">쇼핑백으로 바로가기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var mHtml = $("html");
+	var page = 1;
+	mHtml.animate({scrollTop : 0},10);
+	$(window).on("wheel", function(e) {
+	    if(mHtml.is(":animated")) return;
+	    if(e.originalEvent.deltaY > 0) {
+	        if(page == 3) return;
+	        page++;
+	    } else if(e.originalEvent.deltaY < 0) {
+	        if(page == 1) return;
+	        page--;
+	    }
+	    var posTop =(page-1) * $(window).height();
+	    mHtml.animate({scrollTop : posTop});
+	})
+	
+	function select(id) {
+		var input = document.getElementById("sizeSelect");
+		var gm = document.getElementById("gm");
+		var mm = document.getElementById("mm");
+		var pm = document.getElementById("pm");
+		if(id == "gm"){
+			input.value = "GM";
+			gm.style.border = "1px solid";
+			gm.style.backgroundColor = "black";
+			gm.style.color = "white";
+			
+			mm.style.border = "none";
+			mm.style.backgroundColor = "white";
+			mm.style.color = "black";
+			
+			pm.style.border = "none";
+			pm.style.backgroundColor = "white";
+			pm.style.color = "black";
+		}
+		else if(id == "mm"){
+			input.value = "MM";
+			gm.style.border = "none";
+			gm.style.backgroundColor = "white";
+			gm.style.color = "black";
+			
+			mm.style.border = "1px solid";
+			mm.style.backgroundColor = "black";
+			mm.style.color = "white";
+			
+			
+			pm.style.border = "none";
+			pm.style.backgroundColor = "white";
+			pm.style.color = "black";
+			
+		}
+		else if(id == "pm"){
+			input.value = "PM";
+			gm.style.border = "none";
+			gm.style.backgroundColor = "white";
+			gm.style.color = "black";
+			
+			mm.style.border = "none";
+			mm.style.backgroundColor = "white";
+			mm.style.color = "black";
+			
+			pm.style.border = "1px solid";
+			pm.style.backgroundColor = "black";
+			pm.style.color = "white";
+		}
+	}
+	
+	function modal(id){
+		var zIndex = 9999;
+		var modal = $('#' + id);
+		
+		var bg = $('<div>')
+			.css({
+				position: 'fixed',
+				zIndex: zIndex,
+				left: '0px',
+				top: '0px',
+				width: '100%',
+				height: '100%',
+				overflow: 'auto',
+				backgroundColor: 'rgba(0,0,0,0.4)'
+			})
+			.appendTo('body');
+		modal
+			.css({
+				position: 'fixed',
+				zIndex: zIndex + 1,
+				top: '50%',
+				left: '50%',
+				transform: 'translate(-50%, -50%)',
+				msTransform: 'translate(-50%, -50%)',
+				webkitTransform: 'translate(-50%, -50%)'
+			})
+			.show()
+			.find('.check')
+			.on('click', function() {
+				bg.remove();
+				modal.hide();
+			})
+	}
+</script>
+</html>

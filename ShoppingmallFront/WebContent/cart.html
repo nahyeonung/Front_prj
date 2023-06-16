@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuHaeZo</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/standard.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="js/cart.js" defer></script>
+    <style>
+        @font-face {
+            font-family: 'futur';
+            src: url("fonts/Futura\ Book\ font.ttf");
+        }
+        @font-face{
+            font-family: 'prada';
+            src: url("fonts/engry.otf");
+        }
+        @font-face {
+            font-family: 'burberry';
+            src: url("fonts/Red\ Hat\ Text.ttf");
+        }
+    </style>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="always-on"><!--항상 보여지는 상단 메뉴 바-->
+            <div class="menu-area">
+                <div class="h-top">
+                    <div class="cubeCap">
+                        <div class="cube">
+                            <div class="cube-face cube-face-front"></div>
+                            <div class="cube-face cube-face-back"></div>
+                            <div class="cube-face cube-face-right"></div>
+                            <div class="cube-face cube-face-left"></div>
+                            <div class="cube-face cube-face-top"></div>
+                            <div class="cube-face cube-face-bottom"></div>
+                        </div>
+                    </div>
+                    <div class="top-menu-area">
+                        <ul class="top-menu">
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="regist.html">회원가입</a></li>
+                            <li><a href="login.html">로그인</a></li>
+                        </ul>
+                    </div>
+                </div><!--<h-top 끝 -->
+            </div><!--menu-area 끝 --> 
+            <!--헤더 시작-->
+            <div id="header">
+                <div class="logo">
+                    <a href="startPage.html">
+                        <img src="images/logo.png" alt="GuHaeZo" title="로고">
+                    </a>
+                </div>
+                <nav>
+                    <ul class="header-menu">
+                        <li class="dropdown"><a href="#" class="dropbtn">BAG</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">BAG</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#" class="dropbtn">TOP</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">OUTER</a></li>
+                                <li><a href="#">SHIRTS</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#" class="dropbtn">BOTTOM</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">PANTS</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="icon">
+                    <ul>
+                        <li><a href="#"><img src="images/search.svg" alt="찾기 아이콘"></a></li>
+                        <li class="heart-btn"><a href="#"><img src="images/heart.svg" alt="즐겨찾기 아이콘"></a></li>
+                        <li><a href="#"><img src="images/shopping-bag.svg" alt="장바구니 아이콘"></a></li>
+                        <li class="menu-btn"><a href="#"><img src="images/menu.svg" alt="메뉴 아이콘"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--헤더 끝-->
+        </div><!--상시 보여지는 메뉴 바 끝-->
+        <div class="cart">
+            <div class="cart-index">
+                <div class="cartLDad">
+                    <div class="cartL">
+                        <div class="cartL-head"> <!--장바구니 목록 상단 제목 -->
+                            <h1>나의 쇼핑백</h1>
+                            <a href="main.html" class="cartL-tomain"><span class="mainlink">쇼핑 계속하기</span></a>
+                        </div>
+                        <div class="cartL-content"><!--장바구니 목록 내용-->
+                            <!--장바구니에 추가한 상품 사진-->
+                            <div class="productImage">
+                                <div class="imgouter">
+                                    <img class="cartprd" src="product_images/bag/LV/루이-비통-온더고-mm-모노그램-핸드백--M45321_PM2_Front view 395.webp" alt="장바구니 상품 이미지">
+                                </div>
+                            </div>
+                            <!--이미지 클릭 시 확대해서 보기-->
+                            <div id="modal" class="modal" onwheel="handleModalZoom(event)">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" src="product_images/bag/LV/루이-비통-온더고-mm-모노그램-핸드백--M45321_PM2_Front view 395.webp" alt="상품 이미지" >
+                            </div>
+                            <div class="infoContainer">
+                                <!--상품 이름-->
+                                <div class="productName">
+                                    <p>L48310</p>
+                                    <h3>온더고 MM</h3>
+                                </div>
+                                <!-- 상품 정보 -->
+                                <div class="productInfo">
+                                    <ul class="moreInfo">
+                                        <li><span>색상</span><span>MONOGRAM MONOGRAM REVERSE</span></li><br>
+                                        <li><span>소재</span><span>모노그램</span></li>
+                                    </ul>
+                                    <div class="count-price">
+                                        <select id="quantity" name="quantity">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        <span>￦3,950,000</span>
+                                    </div>
+                                </div>
+                                <!-- 상품 삭제 -->
+                                <div class="productDrop">
+                                   
+                                        <button class="tomarket">
+                                            <i class="xi-market"></i>
+                                            상품 페이지로
+                                        </button>
+                                    
+                                   
+                                        <button class="delete">
+                                            <i class="xi-trash"></i>
+                                            삭제하기
+                                        </button>
+                                   
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="cartRMom">
+                    <div class="cartR">
+                        <!--총 가격 -->
+                        <div class="totalPrice">
+                            <div class="cost">
+                                <ul class="costmenu">
+                                    <li><span>합계</span><span>￦3,950,000</span></li>
+                                    <li><span>배송</span><span>￦0</span></li>
+                                    <li><span>총액</span><span>￦3,950,000</span></li>
+                                </ul>
+                            </div>
+                            <div class="paybtn">
+                                <button class="pay">
+                                    <a href="#">
+                                    결제하기
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                        <!--배송 및 반품에 관한 메세지와 결제 수단 안내-->
+                        <div class="etcService">
+                            <ul class="etc">
+                                <li>
+                                    <button>
+                                        <i class="xi-credit-card"></i>
+                                        <div class="spanto">
+                                            <a href="#">
+                                            <span>결제 안내</span><br>
+                                            <span>간편 결제, 신용카드와 직불 카드, 계좌이체</span>
+                                            </a>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <i class="xi-truck"></i>
+                                        <div class="spanto">
+                                            <a href="#">
+                                            <span>배송 안내</span><br>
+                                            <span>무료 배송 서비스</span>
+                                            </a>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <i class="xi-file-check"></i>
+                                        <div class="spanto">
+                                            <a href="#">
+                                            <span>품질 보증 기준</span><br>
+                                            <span>교환 및 환불 정책 확인</span>
+                                            </a>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <i class="xi-refresh"></i>
+                                        <div class="spanto">
+                                            <a href="#">
+                                            <span>교환 및 환불 정책</span><br>
+                                            <span>7일 이내에 반품 또는 14일 이내에 교환 가능</span>
+                                            </a>
+                                        </div>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--푸터 시작-->
+        <footer>
+            <div id="footer">
+                <div class="f-top">
+                    <ul class="f-menu">
+                        <li class="title"><a href="#">고객 서비스</a></li>
+                        <ul class="f-sub">
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">상담원 문의</a></li>
+                            <li><a href="#">주문 및 배송</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                        </ul>
+                    </ul>
+                    <ul class="f-menu">
+                        <li class="title"><a href="#">이벤트</a></li>
+                        <ul class="f-sub">
+                            <li><a href="#">진행 중인 이벤트</a></li>
+                            <li><a href="#">이벤트 참여</a></li>
+                            <li><a href="#">당첨자 발표</a></li>
+                        </ul>
+                    </ul>
+                    <ul class="f-menu">
+                        <li class="title"><a href="#">법적 고지 및 쿠키</a></li>
+                        <ul class="f-sub">
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">쿠키 정책</a></li>
+                        </ul>
+                    </ul>
+                    <ul class="f-menu social">
+                        <li class="title"><a href="#">SOCIAL</a></li>
+                        <ul class="f-sub">
+                            <li><a href="#"><i class="xi-twitter"></i></a></li>
+                            <li><a href="#"><i class="xi-facebook"></i></a></li>
+                            <li><a href="#"><i class="xi-youtube"></i></a></li>
+                            <li><a href="#"><i class="xi-instagram"></i></a></li>
+                            <li><a href="#"><i class="xi-kakaotalk"></i></a></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="f-line"></div>
+                
+                <div class="f-bottom">
+                    <div class="f-info">
+                        <p> NaNoStyle(유) | 
+                            대표이사:나현웅<br>
+                            서울시 종로구 창경궁로 254 동원빌딩 403호<br>
+                            사업자등록번호: 393-23-49210<br>
+                            고객센터: 010-1234-5678<br>
+                            이메일: nanostyle@naver.com
+                            <br><br>
+                        </p>
+                        <div class="f-info2">
+                            <p></p>
+                        </div>
+                    </div>
+                    <p><i class="xi-maker">대한민국</i>&copy; 2023 NaNoStyle. All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+        <!--푸터 끝-->
+    </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', adjustBElementPosition);
+        window.addEventListener('resize', adjustBElementPosition);
+            function adjustBElementPosition() {
+                var aElement = document.querySelector('.cart-index');
+                var bElement = document.getElementById('footer');
+                var aHeight = aElement.offsetHeight - 560; // a 요소의 높이
+                bElement.style.marginTop = aHeight + 'px'; // b 요소의 marginTop 값 설정
+            }
+    </script>
+</body>
+</html>

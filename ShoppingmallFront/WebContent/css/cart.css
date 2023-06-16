@@ -1,0 +1,264 @@
+@import "reset.css";
+.cart {
+    padding-top: 106px;
+}
+.cart-index {
+    z-index: 9999;
+    width: 100%;
+    height: auto;
+    min-height: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+/* 장바구니 페이지 왼쪽 상품 정보 영역 */
+.cartLDad {
+    display: flex;
+    height: auto;
+    flex:0.65;
+    padding: 10px 50px;
+    background-color: #f5f5f5;;
+}
+.cartL {
+    flex:1;
+    height: 600px;
+}
+.cartL-head{
+    background-color: #f5f5f5;
+    height: 10%;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.cartL-head > h1 {
+    line-height: 60px;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+.cartL-head > a {
+    display: inline-block;
+    line-height: 60px;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.mainlink {
+    border-bottom: 1px solid black;
+}
+.cartL-content {
+    height: 90%;
+    display: flex;
+    border: 2px solid #f5f5f5;
+}
+.productImage {
+    padding: 10px;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    border-right: 2px solid #ededed;;
+}
+.imgouter {
+    height: auto;
+    width: 100%;
+    background-color: rgb(226, 225, 225);
+    text-align: center;
+}
+.imgouter > img {
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+/* 이미지 클릭 시 확대 팝업 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(226, 225, 225);
+}
+.modal-content {
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+}
+.close {
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+/* 이미지 팝업 끝 */
+
+/* 상품 정보 창 */
+.infoContainer {
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.productName {
+    flex: 2;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    align-items: left;
+    border-bottom: 2px solid #ededed;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.productName > p {
+    font-family: "futur";
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.productName > h3 {
+    font-family: "futur";
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.productName > p , .productName > h3 {
+    margin-left: 5%;
+}
+.productInfo {
+    flex: 7;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.moreInfo {
+    flex: 6;
+}
+.moreInfo > li {
+    display: flex;
+    justify-content: space-between;
+}
+.count-price {
+    margin-top: 150px;
+    flex: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.count-price > span {
+    font-weight: bold;
+}
+#quantity {
+    width: 60px;
+    height: 40px;
+}
+.productDrop {
+    border-top: 2px solid #ededed;;
+    flex: 1;
+    display: flex;
+}
+.delete {
+    font-size: 1em;
+    font-weight: lighter;
+    background-color: rgb(255, 255, 255);
+    flex: 1;
+    border: none;
+    margin: auto;
+    line-height: 53px;
+}
+.delete i, .tomarket i {
+    font-size: 1em;
+}
+.tomarket {
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: 2px solid #ededed;
+    font-size: 1em;
+    font-weight: lighter;
+    background-color: rgb(255, 255, 255);
+    flex: 1;
+    margin: auto;
+    line-height: 53px;
+}
+/* 오른쪽 화면 결제 창 */
+.cartRMom {
+    height: auto;
+    flex:0.35;
+    display: flex;
+}
+.cartR {
+    height: 700px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.totalPrice {
+    flex:3;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 50px;
+}
+.cost {
+    flex: 7;
+}
+.costmenu > li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.costmenu > li:last-child {
+    font-weight: bold;
+    margin-top: 40px;
+}
+.paybtn {
+    flex: 3;
+}
+.pay {
+    font-size: 1em;
+    font-weight: lighter;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    border: none;
+    line-height: 53px;
+}
+.pay a {
+    color: #fff;
+}
+.etcService {
+    flex:7;
+    background-color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.etc {
+    flex: 1;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.etc > li {
+    flex:1;
+}
+.etc > li > button {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    color: #111;
+    font-weight: lighter;
+    background-color: #fff;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ededed;
+}
+.etc > li > button > i {
+    flex: 0.2;
+    font-size: 2em;
+}
+.spanto {
+    flex: 0.8;
+    text-align: left;
+}

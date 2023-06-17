@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/productDetail.css">
-	<script src="https://code.jquery.com/jquery-3.7.0.js"></script></head>
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>	
+</head>
 <body style="height:100%">
 		<div class="menu-area">
             <div class="h-top">
@@ -113,7 +114,8 @@
 				<div style="width:100%; height:100%; margin:4%">
 					<p style="margin-bottom: 2%; font-size: 17px">온더고</p>
 					<p style="color:gray; font-size:13px; margin-bottom: 1%">M46373</p>
-					<p style="color:gray; margin-bottom: 2%; font-size: 14px">색상: 모노그램</p>
+					<span style="color:gray; margin-bottom: 2%; font-size: 14px">사이즈: </span>
+					<input id="modal_input" style="color:gray; width: 50px; border: none" type="text" value="" readonly>
 					<p style="font-size: 16px">₩ 3,950,000</p>
 				</div>
 			</div>		
@@ -124,10 +126,15 @@
 			</div>
 			<div class="modal_bottom_right">
 				<div>
-					<a style="color:white" href="main.html" class="check">쇼핑백으로 바로가기</a>
+					<a style="color:white" href="cart.html" class="check">쇼핑백으로 바로가기</a>
 				</div>
 			</div>
 		</div>
+	</div>
+	<!-- 에러 모달창 -->
+	<div id="error_modal">
+		<div style="margin-bottom:7%; font-weight: bold">사이즈를 선택해주세요</div>
+		<div class="check" style="font-size: 14px; text-align:right; cursor:pointer">확인</div>
 	</div>
 </body>
 <script>
@@ -148,11 +155,13 @@
 	})
 	
 	function select(id) {
+		var modal_input = document.getElementById("modal_input");
 		var input = document.getElementById("sizeSelect");
 		var gm = document.getElementById("gm");
 		var mm = document.getElementById("mm");
 		var pm = document.getElementById("pm");
 		if(id == "gm"){
+			modal_input.value = "GM";
 			input.value = "GM";
 			gm.style.border = "1px solid";
 			gm.style.backgroundColor = "black";
@@ -167,6 +176,7 @@
 			pm.style.color = "black";
 		}
 		else if(id == "mm"){
+			modal_input.value = "MM";
 			input.value = "MM";
 			gm.style.border = "none";
 			gm.style.backgroundColor = "white";
@@ -183,6 +193,7 @@
 			
 		}
 		else if(id == "pm"){
+			modal_input.value = "PM";
 			input.value = "PM";
 			gm.style.border = "none";
 			gm.style.backgroundColor = "white";
@@ -199,37 +210,73 @@
 	}
 	
 	function modal(id){
-		var zIndex = 9999;
-		var modal = $('#' + id);
+		var input = document.getElementById("sizeSelect").value;
+		if(input == ""){
+			var zIndex = 9999;
+			var modal = $('#error_modal');
+			
+			var bg = $('<div>')
+				.css({
+					position: 'fixed',
+					zIndex: zIndex,
+					left: '0px',
+					top: '0px',
+					width: '100%',
+					height: '100%',
+					overflow: 'auto',
+					backgroundColor: 'rgba(0,0,0,0.4)'
+				})
+				.appendTo('body');
+			modal
+				.css({
+					position: 'fixed',
+					zIndex: zIndex + 1,
+					top: '50%',
+					left: '50%',
+					transform: 'translate(-50%, -50%)',
+					msTransform: 'translate(-50%, -50%)',
+					webkitTransform: 'translate(-50%, -50%)'
+				})
+				.show()
+				.find('.check')
+				.on('click', function() {
+					bg.remove();
+					modal.hide();
+				})
+		}else{
+			var zIndex = 9999;
+			var modal = $('#' + id);
+			
+			var bg = $('<div>')
+				.css({
+					position: 'fixed',
+					zIndex: zIndex,
+					left: '0px',
+					top: '0px',
+					width: '100%',
+					height: '100%',
+					overflow: 'auto',
+					backgroundColor: 'rgba(0,0,0,0.4)'
+				})
+				.appendTo('body');
+			modal
+				.css({
+					position: 'fixed',
+					zIndex: zIndex + 1,
+					top: '50%',
+					left: '50%',
+					transform: 'translate(-50%, -50%)',
+					msTransform: 'translate(-50%, -50%)',
+					webkitTransform: 'translate(-50%, -50%)'
+				})
+				.show()
+				.find('.check')
+				.on('click', function() {
+					bg.remove();
+					modal.hide();
+				})
+		}
 		
-		var bg = $('<div>')
-			.css({
-				position: 'fixed',
-				zIndex: zIndex,
-				left: '0px',
-				top: '0px',
-				width: '100%',
-				height: '100%',
-				overflow: 'auto',
-				backgroundColor: 'rgba(0,0,0,0.4)'
-			})
-			.appendTo('body');
-		modal
-			.css({
-				position: 'fixed',
-				zIndex: zIndex + 1,
-				top: '50%',
-				left: '50%',
-				transform: 'translate(-50%, -50%)',
-				msTransform: 'translate(-50%, -50%)',
-				webkitTransform: 'translate(-50%, -50%)'
-			})
-			.show()
-			.find('.check')
-			.on('click', function() {
-				bg.remove();
-				modal.hide();
-			})
 	}
 </script>
 </html>

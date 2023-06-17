@@ -70,6 +70,14 @@
 	margin-right:5%;
 	cursor: pointer;
 }
+#error_modal{
+	display: none;
+	width: 10%;
+	padding: 10px 10px;
+	background-color: #fefefe;
+	border: 1px solid #888;
+	border-radius: 3px;
+}
 #modal{
 	display: none;
 	width: 30%;

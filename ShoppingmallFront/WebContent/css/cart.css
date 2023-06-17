@@ -216,12 +216,14 @@
     flex: 3;
 }
 .pay {
+	color: white;
     font-size: 1em;
     font-weight: lighter;
     background-color: rgb(0, 0, 0);
     width: 100%;
     border: none;
     line-height: 53px;
+    cursor: pointer;
 }
 .pay a {
     color: #fff;
@@ -262,3 +264,21 @@
     flex: 0.8;
     text-align: left;
 }
+particule {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  box-shadow: 1px 1px 4px #eb6383;
+}
+#purchase_modal{
+	display: none;
+	width: 10%;
+	padding: 10px 10px;
+	background-color: #fefefe;
+	border: 1px solid #888;
+	border-radius: 3px;
+}
+

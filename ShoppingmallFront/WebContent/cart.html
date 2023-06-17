@@ -28,70 +28,66 @@
             src: url("fonts/Red\ Hat\ Text.ttf");
         }
     </style>
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div id="wrapper">
-        <div id="always-on"><!--항상 보여지는 상단 메뉴 바-->
-            <div class="menu-area">
-                <div class="h-top">
-                    <div class="cubeCap">
-                        <div class="cube">
-                            <div class="cube-face cube-face-front"></div>
-                            <div class="cube-face cube-face-back"></div>
-                            <div class="cube-face cube-face-right"></div>
-                            <div class="cube-face cube-face-left"></div>
-                            <div class="cube-face cube-face-top"></div>
-                            <div class="cube-face cube-face-bottom"></div>
-                        </div>
-                    </div>
-                    <div class="top-menu-area">
-                        <ul class="top-menu">
-                            <li><a href="#">고객센터</a></li>
-                            <li><a href="regist.html">회원가입</a></li>
-                            <li><a href="login.html">로그인</a></li>
-                        </ul>
-                    </div>
-                </div><!--<h-top 끝 -->
-            </div><!--menu-area 끝 --> 
-            <!--헤더 시작-->
-            <div id="header">
-                <div class="logo">
-                    <a href="startPage.html">
-                        <img src="images/logo.png" alt="GuHaeZo" title="로고">
-                    </a>
-                </div>
-                <nav>
-                    <ul class="header-menu">
-                        <li class="dropdown"><a href="#" class="dropbtn">BAG</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">BAG</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#" class="dropbtn">TOP</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">OUTER</a></li>
-                                <li><a href="#">SHIRTS</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#" class="dropbtn">BOTTOM</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">PANTS</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="icon">
-                    <ul>
-                        <li><a href="#"><img src="images/search.svg" alt="찾기 아이콘"></a></li>
-                        <li class="heart-btn"><a href="#"><img src="images/heart.svg" alt="즐겨찾기 아이콘"></a></li>
-                        <li><a href="#"><img src="images/shopping-bag.svg" alt="장바구니 아이콘"></a></li>
-                        <li class="menu-btn"><a href="#"><img src="images/menu.svg" alt="메뉴 아이콘"></a></li>
+        <div class="menu-area">
+            <div class="h-top">
+                <div class="top-menu-area">
+                    <ul class="top-menu">
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="regist.html">회원가입</a></li>
+                        <li><a href="login.html">로그인</a></li>
                     </ul>
                 </div>
+            </div><!--<h-top 끝 -->
+        </div><!--menu-area 끝 --> 
+
+        <!--헤더 시작-->
+        <div id="header">
+            <div class="logo">
+                <a href="main.html">
+                    <h1>THA GUHAEZO</h1>
+                </a>
             </div>
-            <!--헤더 끝-->
-        </div><!--상시 보여지는 메뉴 바 끝-->
+            <nav>
+                <ul class="header-menu">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">BAG</a>
+                        <ul class="sub-menu">
+                            <li><a href="bag.html">BAG</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">TOP</a>
+                        <ul class="sub-menu">
+                            <li><a href="main.html">OUTER</a></li>
+                            <li><a href="shirts.html">SHIRTS</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">BOTTOM</a>
+                        <ul class="sub-menu">
+                            <li><a href="pants.html">PANTS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="icon">
+                <ul>
+                    <li><div class="search-box">
+      					<input type="text" class="search-txt" name=""placeholder="Type to search">
+      					<a class="search-btn" href="#"><img src="images/search.svg" alt="찾기 아이콘"></a>
+        				<i class="fas fa-search"></i>
+    				</div></li>
+    				<li>
+    					<img src="images/shopping-bag.svg">
+    				</li>
+                </ul>
+            </div>
+        </div>
+        <!--헤더 끝-->
         <div class="cart">
             <div class="cart-index">
                 <div class="cartLDad">
@@ -166,11 +162,7 @@
                                 </ul>
                             </div>
                             <div class="paybtn">
-                                <button class="pay">
-                                    <a href="#">
-                                    결제하기
-                                    </a>
-                                </button>
+                                <button class="pay" onclick="modals()">결제하기</button>
                             </div>
                         </div>
                         <!--배송 및 반품에 관한 메세지와 결제 수단 안내-->
@@ -226,6 +218,11 @@
                 </div>
             </div>
         </div>
+        <!-- 모달창 -->
+		<div id="purchase_modal">
+			<div style="margin-bottom:7%; font-weight: bold">구매 완료되었습니다.</div>
+			<div class="check" style="font-size: 14px; text-align:right; cursor:pointer">확인</div>
+		</div>
         <!--푸터 시작-->
         <footer>
             <div id="footer">
@@ -289,6 +286,7 @@
         </footer>
         <!--푸터 끝-->
     </div>
+    <script src="js/popcorn.js"></script>
     <script>
         window.addEventListener('DOMContentLoaded', adjustBElementPosition);
         window.addEventListener('resize', adjustBElementPosition);
@@ -297,6 +295,27 @@
                 var bElement = document.getElementById('footer');
                 var aHeight = aElement.offsetHeight - 560; // a 요소의 높이
                 bElement.style.marginTop = aHeight + 'px'; // b 요소의 marginTop 값 설정
+            }
+            function modals(){
+        		var zIndex = 999;
+        		var modal = $('#purchase_modal');
+        		
+       			modal
+        			.css({
+        				position: 'fixed',
+       					zIndex: 999,
+       					top: '50%',
+       					left: '50%',
+       					transform: 'translate(-50%, -50%)',
+       					msTransform: 'translate(-50%, -50%)',
+       					webkitTransform: 'translate(-50%, -50%)'
+       				})
+       				.show()
+       				.find('.check')
+       				.on('click', function() {
+       					modal.hide();
+       					location.href="main.html";
+       				})
             }
     </script>
 </body>

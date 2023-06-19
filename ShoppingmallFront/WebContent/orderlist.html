@@ -8,7 +8,7 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/orderlist.css">
     <link rel="stylesheet" href="css/standard.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -92,142 +92,212 @@
             </div>
             <!--헤더 끝-->
         </div><!--상시 보여지는 메뉴 바 끝-->
-        <div class="cart">
-            <div class="cart-index">
-                <div class="cartLDad">
-                    <div class="cartL">
-                        <div class="cartL-head"> <!--장바구니 목록 상단 제목 -->
-                            <h1>나의 쇼핑백</h1>
-                            <a href="main.html" class="cartL-tomain"><span class="mainlink">쇼핑 계속하기</span></a>
-                        </div>
-                        <div class="cartL-content"><!--장바구니 목록 내용-->
-                            <!--장바구니에 추가한 상품 사진-->
-                            <div class="productImage">
-                                <div class="imgouter">
-                                    <img class="cartprd" src="product_images/bag/LV/루이-비통-온더고-mm-모노그램-핸드백--M45321_PM2_Front view 395.webp" alt="장바구니 상품 이미지">
-                                </div>
-                            </div>
-                            <!--이미지 클릭 시 확대해서 보기-->
-                            <div id="modal" class="modal" onwheel="handleModalZoom(event)">
-                                <span class="close">&times;</span>
-                                <img class="modal-content" src="product_images/bag/LV/루이-비통-온더고-mm-모노그램-핸드백--M45321_PM2_Front view 395.webp" alt="상품 이미지" >
-                            </div>
-                            <div class="infoContainer">
-                                <!--상품 이름-->
-                                <div class="productName">
-                                    <p>L48310</p>
-                                    <h3>온더고 MM</h3>
-                                </div>
-                                <!-- 상품 정보 -->
-                                <div class="productInfo">
-                                    <ul class="moreInfo">
-                                        <li><span>색상</span><span>MONOGRAM MONOGRAM REVERSE</span></li><br>
-                                        <li><span>소재</span><span>모노그램</span></li>
-                                    </ul>
-                                    <div class="count-price">
-                                        <select id="quantity" name="quantity">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                        <span>￦3,950,000</span>
-                                    </div>
-                                </div>
-                                <!-- 상품 삭제 -->
-                                <div class="productDrop">
-                                    <button class="tomarket">
-                                        <i class="xi-market"></i>
-                                        <a href="#">
-                                        상품 페이지로
-                                        </a>
-                                    </button>
-                                    <button class="delete">
-                                        <i class="xi-trash"></i>
-                                        <a href="#">
-                                        삭제하기
-                                        </a>
-                                    </button>
-                                </div>
-                            </div>    
-                        </div>
-                    </div>
+        <div class="list">
+            <div class="orderlist">
+                <div class="tableheader">
+                    <h2 class="title">주문내역</h2>
                 </div>
-                <div class="cartRMom">
-                    <div class="cartR">
-                        <!--총 가격 -->
-                        <div class="totalPrice">
-                            <div class="cost">
-                                <ul class="costmenu">
-                                    <li><span>합계</span><span>￦3,950,000</span></li>
-                                    <li><span>배송</span><span>￦0</span></li>
-                                    <li><span>총액</span><span>￦3,950,000</span></li>
-                                </ul>
-                            </div>
-                            <div class="paybtn">
-                                <button class="pay">
-                                    <a href="#">
-                                    결제하기
+                <table class="ordertable">
+                    <thead>
+                        <tr>
+                            <th>상품정보</th>
+                            <th>주문일자</th>
+                            <th>주문번호</th>
+                            <th>주문금액(수량)</th>
+                            <th colspan="2">주문 상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr> <!-- 주문 내역 첫번째 -->
+                            <td>
+                                <div class="prdinfo">
+                                    <a href="#" class="img">
+                                        <img class="image" src="product_images/bag/LV/루이-비통-온더고-mm-모노그램-핸드백--M45321_PM2_Front view 395.webp" alt="장바구니 상품 이미지">
                                     </a>
-                                </button>
-                            </div>
-                        </div>
-                        <!--배송 및 반품에 관한 메세지와 결제 수단 안내-->
-                        <div class="etcService">
-                            <ul class="etc">
-                                <li>
-                                    <button>
-                                        <i class="xi-credit-card"></i>
-                                        <div class="spanto">
-                                            <a href="#">
-                                            <span>결제 안내</span><br>
-                                            <span>간편 결제, 신용카드와 직불 카드, 계좌이체</span>
-                                            </a>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button>
-                                        <i class="xi-truck"></i>
-                                        <div class="spanto">
-                                            <a href="#">
-                                            <span>배송 안내</span><br>
-                                            <span>무료 배송 서비스</span>
-                                            </a>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button>
-                                        <i class="xi-file-check"></i>
-                                        <div class="spanto">
-                                            <a href="#">
-                                            <span>품질 보증 기준</span><br>
-                                            <span>교환 및 환불 정책 확인</span>
-                                            </a>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button>
-                                        <i class="xi-refresh"></i>
-                                        <div class="spanto">
-                                            <a href="#">
-                                            <span>교환 및 환불 정책</span><br>
-                                            <span>7일 이내에 반품 또는 14일 이내에 교환 가능</span>
-                                            </a>
-                                        </div>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                                    <ul class="info">
+                                        <li class="brand"><span class="lvfont">LOUIS-VUITTON</span></li>
+                                        <li class="name"><span class="prdnamelv">온더고 MM</span></li>
+                                        <li class="option">
+                                            색상: MONOGRAM MONOGRAM REVERSE<br>
+                                            소재: 모노그램
+                                        </li>
+                                    </ul>
+                                    <ul class="ship">
+                                        <li>배송지: 집</li>
+                                        <li>배송방법: 택배 배송</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="date">
+                                <p>2023-06-15</p>
+                            </td>
+                            <td class="orderid">
+                                <p>
+                                    20230615484920
+                                </p>
+                            </td>
+                            <td class="pricecount">
+                                <p>
+                                    3,950,000원<br>
+                                    1개
+                                </p>
+                            </td>
+                            <td class="process">
+                                <p>
+                                    출고 중 <br>
+                                    <a href="#">
+                                        배송 조회
+                                    </a>
+                                </p>
+                            </td>
+                            <td class="buttons">
+                                <div class="btn">
+                                    <a href="#"><button type="button">주문 취소</button></a>
+                                    <a href="#"><button type="button">옵션 변경</button></a>
+                                    <a href="#"><button type="button">배송지 변경</button></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr><!-- 주문 내역 두번째 -->
+                            <td>
+                                <div class="prdinfo">
+                                    <a href="#" class="img">
+                                        <img class="image" src="product_images/outer/burberry/taylored coat front.webp" alt="장바구니 상품 이미지">
+                                    </a>
+                                    <ul class="info">
+                                        <li class="brand"><span class="bbrfont">BURBERRY</span></li>
+                                        <li class="name"><span class="prdnamebbr">울 캐시미어 테일러드 코트</span></li>
+                                        <li class="option">
+                                            색상: 카멜<br>
+                                            사이즈: 48
+                                        </li>
+                                    </ul>
+                                    <ul class="ship">
+                                        <li>배송지: 집</li>
+                                        <li>배송방법: 택배 배송</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="date">
+                                <p>2023-06-09</p>
+                            </td>
+                            <td class="orderid">
+                                <p>
+                                    20230609484920
+                                </p>
+                            </td>
+                            <td class="pricecount">
+                                <p>
+                                    3,390,000원<br>
+                                    1개
+                                </p>
+                            </td>
+                            <td class="process">
+                                <p>
+                                    배송 완료
+                                </p>
+                            </td>
+                            <td class="buttons">
+                                <div class="btn">
+                                    <button type="button">후기 작성</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr><!-- 주문 내역 세번째 -->
+                            <td>
+                                <div class="prdinfo">
+                                    <a href="#" class="img">
+                                        <img class="image" src="product_images/pants/prada/코튼 박서 쇼츠 68.avif" alt="장바구니 상품 이미지">
+                                    </a>
+                                    <ul class="info">
+                                        <li class="brand"><span class="pradafont">PRADA</span></li>
+                                        <li class="name"><span class="prdnameprada">코튼 박서 쇼츠</span></li>
+                                        <li class="option">
+                                            색상: 화이트<br>
+                                            사이즈: 4
+                                        </li>
+                                    </ul>
+                                    <ul class="ship">
+                                        <li>배송지: 집</li>
+                                        <li>배송방법: 택배 배송</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="date">
+                                <p>2023-05-18</p>
+                            </td>
+                            <td class="orderid">
+                                <p>
+                                    20230518127356
+                                </p>
+                            </td>
+                            <td class="pricecount">
+                                <p>
+                                    680,000원<br>
+                                    1개
+                                </p>
+                            </td>
+                            <td class="process">
+                                <p>
+                                    배송 완료
+                                </p>
+                            </td>
+                            <td class="buttons">
+                                <div class="btn">
+                                    <button type="button">후기 작성</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr> <!-- 주문 내역 네번째 -->
+                            <td>
+                                <div class="prdinfo">
+                                    <a href="#" class="img">
+                                        <img class="image" src="product_images/shirts/LV/루이-비통-롱-슬리브-슬림-셔츠--HPS8PWR53640_PM2_Front view.avif" alt="장바구니 상품 이미지">
+                                    </a>
+                                    <ul class="info">
+                                        <li class="brand"><span class="lvfont">LOUIS-VUITTON</span></li>
+                                        <li class="name"><span class="prdnamelv">롱 슬리브 슬림 셔츠</span></li>
+                                        <li class="option">
+                                            색상: 베이비 블루<br>
+                                            사이즈: 40
+                                        </li>
+                                    </ul>
+                                    <ul class="ship">
+                                        <li>배송지: 집</li>
+                                        <li>배송방법: 택배 배송</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="date">
+                                <p>2023-04-11</p>
+                            </td>
+                            <td class="orderid">
+                                <p>
+                                    20230411503823
+                                </p>
+                            </td>
+                            <td class="pricecount">
+                                <p>
+                                    1,190,000원<br>
+                                    1개
+                                </p>
+                            </td>
+                            <td class="process">
+                                <p>
+                                    배송 완료 <br>
+                                </p>
+                            </td>
+                            <td class="buttons">
+                                <div class="btn">
+                                    <a href="#"><button type="button">후기 작성</button></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <!--푸터 시작-->
-        <!--
         <footer>
             <div id="footer">
                 <div class="f-top">
@@ -288,18 +358,17 @@
                 </div>
             </div>
         </footer>
-        -->
         <!--푸터 끝-->
     </div>
     <script>
-        // window.addEventListener('DOMContentLoaded', adjustBElementPosition);
-        // window.addEventListener('resize', adjustBElementPosition);
-        //     function adjustBElementPosition() {
-        //         var aElement = document.querySelector('.cart-index');
-        //         var bElement = document.getElementById('footer');
-        //         var aHeight = aElement.offsetHeight - 560; // a 요소의 높이
-        //         bElement.style.marginTop = aHeight + 'px'; // b 요소의 marginTop 값 설정
-        //     }
+        window.addEventListener('DOMContentLoaded', adjustBElementPosition);
+        window.addEventListener('resize', adjustBElementPosition);
+            function adjustBElementPosition() {
+                var aElement = document.querySelector('.list');
+                var bElement = document.getElementById('footer');
+                var aHeight = aElement.offsetHeight - 900; // a 요소의 높이
+                bElement.style.marginTop = aHeight + 'px'; // b 요소의 marginTop 값 설정
+            }
     </script>
 </body>
 </html>

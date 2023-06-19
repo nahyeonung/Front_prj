@@ -112,7 +112,10 @@
                                 <!--상품 이름-->
                                 <div class="productName">
                                     <p>L48310</p>
-                                    <h3>온더고 MM</h3>
+                                    <div style="display: flex;">
+                                    	<span>온더고 </span>
+                                    	<input id="size" type="text" value="">
+                                    </div>
                                 </div>
                                 <!-- 상품 정보 -->
                                 <div class="productInfo">
@@ -220,8 +223,28 @@
         </div>
         <!-- 모달창 -->
 		<div id="purchase_modal">
-			<div style="margin-bottom:7%; font-weight: bold">구매 완료되었습니다.</div>
-			<div class="check" style="font-size: 14px; text-align:right; cursor:pointer">확인</div>
+			<div class="modal_title">구매가 완료되었습니다.</div>
+			<div class="modal_main">
+				<div class="modal_main_left">
+					<div>
+						<img style="height: 100%; width: 100%" class="prd-img" src="product_images/detail2.webp" alt="상품 이미지">
+					</div>
+				</div>
+				<div class="modal_main_right">
+					<div style="width:100%; height:100%; margin:4%">
+						<p style="margin-bottom: 2%; font-size: 17px">온더고</p>
+						<p style="color:gray; font-size:13px; margin-bottom: 1%">M46373</p>
+						<span style="color:gray; margin-bottom: 2%; font-size: 14px">사이즈: </span>
+						<input id="modal_input" style="color:gray; width: 50px; border: none" type="text" value="" readonly>
+						<p style="font-size: 16px">₩ 3,950,000</p>
+					</div>
+				</div>		
+			</div>
+			<div class="modal_bottom">
+				<div class="modal_bottom_left">
+					<a href="main.html" class="check">확인</a>
+				</div>
+			</div>
 		</div>
         <!--푸터 시작-->
         <footer>
@@ -288,6 +311,12 @@
     </div>
     <script src="js/popcorn.js"></script>
     <script>
+    	var receiveData = location.href.split('?')[1];
+    	var input = document.getElementById("size");
+    	var mInput = document.getElementById("modal_input");
+    	input.value = receiveData;
+    	mInput.value = receiveData;
+    
         window.addEventListener('DOMContentLoaded', adjustBElementPosition);
         window.addEventListener('resize', adjustBElementPosition);
             function adjustBElementPosition() {

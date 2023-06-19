@@ -1,12 +1,7 @@
-console.clear();
-
-
 let particles = [];
-//const colors = ["#eb6383","#fa9191","#ffe9c5","#b4f2e1"];
-const colors = ["black", "gray", "#2B2B55", "white"]
+const colors = ["black", "gray", "#2B2B55", "white"];
 function pop () {
-	console.log("pop");
-  for (let i = 0; i < 150; i++) {
+  for (let i = 0; i < 100; i++) {
     const p = document.createElement('particule');
     p.x = window.innerWidth * 0.5;
     p.y = window.innerHeight + (Math.random() * window.innerHeight * 0.3);
@@ -17,17 +12,18 @@ function pop () {
     p.mass = Math.random() * 0.2 + 0.8;
     particles.push(p);
     p.style.transform = `translate(${p.x}px, ${p.y}px)`;
-    const size = Math.random() * 15 + 5;
+    const size = Math.random() * 50 + 5; 
     p.style.width = size + 'px';
     p.style.height = size + 'px';
-    p.style.background = colors[Math.floor(Math.random()*colors.length)];
+	p.style.backgroundImage = "url('images/lvBag.webp')";
+	p.style.backgroundSize = "100%";
+    //p.style.background = colors[Math.floor(Math.random()*colors.length)];
 	p.style.zIndex = 997;
     document.body.appendChild(p);
   }
 }
 
 function render () {
-	console.log("안녕");
   for (let i = particles.length - 1; i--; i > -1) {
     const p = particles[i];
     p.style.transform = `translate3d(${p.x}px, ${p.y}px, 1px)`;

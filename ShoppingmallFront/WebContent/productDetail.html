@@ -103,7 +103,9 @@
 	</div>
 	<!--모달창-->
 	<div id="modal">
-		<div class="modal_title">해당 제품이 쇼핑백에 추가되었습니다.</div>
+		<div class="modal_title">
+			<span>해당 제품이 쇼핑백에 추가되었습니다.</span>
+		</div>
 		<div class="modal_main">
 			<div class="modal_main_left">
 				<div>
@@ -122,11 +124,11 @@
 		</div>
 		<div class="modal_bottom">
 			<div class="modal_bottom_left">
-				<a href="main.html" class="check">계속 쇼핑하기</a>
+				<a class="check">닫기</a>
 			</div>
 			<div class="modal_bottom_right">
-				<div>
-					<a style="color:white" href="cart.html" class="check">쇼핑백으로 바로가기</a>
+				<div onclick="sendData()">
+					<a style="color:white" class="check">쇼핑백으로 바로가기</a>
 				</div>
 			</div>
 		</div>
@@ -153,6 +155,12 @@
 	    var posTop =(page-1) * $(window).height();
 	    mHtml.animate({scrollTop : posTop});
 	})
+	function sendData(){
+		var size = document.getElementById("sizeSelect");
+		var val = size.value;
+		console.log(val);
+		location.href=`cart.html?${val}`;
+	}
 	
 	function select(id) {
 		var modal_input = document.getElementById("modal_input");
